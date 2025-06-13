@@ -1,22 +1,32 @@
 "use client";
 
-import { createContext, useEffect, useState, useMemo, ReactNode } from "react";
-import { Article, ArticlesContextValue } from "./types";
+import {
+   createContext,
+   useEffect,
+   useState,
+   useMemo,
+   useCallback,
+} from "react";
+import {
+   Article,
+   ArticlesContextValue,
+   ArticlesProviderProps,
+   Filters,
+} from "./types";
 
-export const ArticlesContext = createContext<ArticlesContextValue>({
-   articles: [],
-   isLoading: false,
-   error: null,
-});
-
-interface ArticlesProviderProps {
-   children: ReactNode;
-}
+export const ArticlesContext = createContext<ArticlesContextValue>(
+   {} as ArticlesContextValue
+);
 
 export function ArticlesProvider({ children }: ArticlesProviderProps) {
    const [articles, setArticles] = useState<Article[]>([]);
    const [isLoading, setIsLoading] = useState(false);
    const [error, setError] = useState<string | null>(null);
+
+   const [searchTerm, setSearchTerm] = useState("");
+   const [appliedFilters, setAppliedFilters] = useState<Filters>({
+      searchTerm: "",
+   });
 
    useEffect(() => {
       const fetchArticles = async () => {
@@ -38,7 +48,7 @@ export function ArticlesProvider({ children }: ArticlesProviderProps) {
             if (err instanceof Error) {
                setError(err.message);
             } else {
-               setError(String(err));
+               setError("Erro desconhecido");
             }
          } finally {
             setIsLoading(false);
@@ -48,9 +58,52 @@ export function ArticlesProvider({ children }: ArticlesProviderProps) {
       fetchArticles();
    }, []);
 
+   const filteredArticles = useMemo(() => {
+      const term = appliedFilters.searchTerm.toLowerCase().trim();
+      if (!term) return articles;
+
+      return articles.filter((article) => {
+         const inType = article.type.toLowerCase().includes(term);
+         const inDate = article.date.toLowerCase().includes(term);
+         const inTitle = article.title.toLowerCase().includes(term);
+         const inDescription = article.description.toLowerCase().includes(term);
+         const inAuthor = article.author.some((a) =>
+            a.name.toLowerCase().includes(term)
+         );
+
+         return inType || inDate || inTitle || inDescription || inAuthor;
+      });
+   }, [articles, appliedFilters.searchTerm]);
+
+   const handleSubmit = useCallback(() => {
+      setAppliedFilters({ searchTerm });
+   }, [searchTerm]);
+
+   const handleClearSearch = useCallback(() => {
+      setSearchTerm("");
+      setAppliedFilters({ searchTerm: "" });
+   }, []);
+
    const contextValue = useMemo<ArticlesContextValue>(
-      () => ({ articles, isLoading, error }),
-      [articles, isLoading, error]
+      () => ({
+         articles,
+         filteredArticles,
+         isLoading,
+         error,
+         searchTerm,
+         setSearchTerm,
+         handleSubmit,
+         handleClearSearch,
+      }),
+      [
+         articles,
+         filteredArticles,
+         isLoading,
+         error,
+         searchTerm,
+         handleSubmit,
+         handleClearSearch,
+      ]
    );
 
    return (
