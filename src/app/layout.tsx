@@ -1,6 +1,7 @@
+import "../styles/globals.css";
 import type { Metadata } from "next";
 import { Poppins, Caveat } from "next/font/google";
-import "../styles/globals.css";
+import { ArticlesProvider } from "@/context/ArticlesContext";
 
 export const metadata: Metadata = {
    title: "Create Next App",
@@ -25,10 +26,14 @@ export default function RootLayout({
    children: React.ReactNode;
 }>) {
    return (
-      <html lang="pt-br">
-         <body className={`${poppins.variable} ${caveat.variable} antialiased`}>
-            {children}
-         </body>
-      </html>
+      <ArticlesProvider>
+         <html lang="pt-br">
+            <body
+               className={`${poppins.variable} ${caveat.variable} antialiased`}
+            >
+               {children}
+            </body>
+         </html>
+      </ArticlesProvider>
    );
 }
