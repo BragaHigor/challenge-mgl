@@ -1,0 +1,593 @@
+{
+  "articles": [
+    {
+      "id": "1",
+      "type": "music",
+      "img_sm": "/assets/categories/img/music/1-sm.png",
+      "img_lg": "/assets/categories/img/music/1-lg.png",
+      "date": "2025-01-05",
+      "hour": "20:00",
+      "title": "Rock Legends Live Concert",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.",
+      "author": [
+        {
+          "img_avatar": "/assets/author/author-avt-1.png",
+          "name": "Higor Braga",
+          "social": [
+            {
+              "icon": "/assets/author/social/x.svg",
+              "path": ""
+            },
+            {
+              "icon": "/assets/author/social/instagram.svg",
+              "path": ""
+            },
+            {
+              "icon": "/assets/author/social/linkedin.svg",
+              "path": "https://www.linkedin.com/in/higor-braga-99010ba1/"
+            }
+          ]
+        }
+      ],
+      "recommended": false
+    },
+    {
+      "id": "2",
+      "type": "music",
+      "img_sm": "/assets/categories/img/music/2-sm.png",
+      "img_lg": "/assets/categories/img/music/2-lg.png",
+      "date": "2025-01-15",
+      "hour": "19:00",
+      "title": "Jazz Night Live",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.",
+      "author": [
+        {
+          "img_avatar": "/assets/author/author-avt-2.png",
+          "name": "Gabriela Laforgia",
+          "social": [
+            {
+              "icon": "/assets/author/social/x.svg",
+              "path": ""
+            },
+            {
+              "icon": "/assets/author/social/instagram.svg",
+              "path": ""
+            },
+            {
+              "icon": "/assets/author/social/linkedin.svg",
+              "path": "https://www.linkedin.com/in/gabriela-laforgia-34632050/"
+            }
+          ]
+        }
+      ],
+      "recommended": true
+    },
+    {
+      "id": "3",
+      "type": "art",
+      "img_sm": "/assets/categories/img/art/3-sm.png",
+      "img_lg": "/assets/categories/img/art/3-lg.png",
+      "date": "2025-01-20",
+      "hour": "10:00",
+      "title": "Street Art Festival",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.",
+      "author": [
+        {
+          "img_avatar": "/assets/author/author-avt-3.png",
+          "name": "Adriano Santos",
+          "social": [
+            {
+              "icon": "/assets/author/social/x.svg",
+              "path": ""
+            },
+            {
+              "icon": "/assets/author/social/instagram.svg",
+              "path": ""
+            },
+            {
+              "icon": "/assets/author/social/linkedin.svg",
+              "path": "https://www.linkedin.com/in/santosbio/"
+            }
+          ]
+        }
+      ],
+      "recommended": true
+    },
+    {
+      "id": "4",
+      "type": "art",
+      "img_sm": "/assets/categories/img/art/2-sm.png",
+      "img_lg": "/assets/categories/img/art/2-lg.png",
+      "date": "2025-02-01",
+      "hour": "11:00",
+      "title": "Impressionist Art Exhibition",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.paintings.",
+      "author": [
+        {
+          "img_avatar": "/assets/author/author-avt-1.png",
+          "name": "Higor Braga",
+          "social": [
+            {
+              "icon": "/assets/author/social/x.svg",
+              "path": ""
+            },
+            {
+              "icon": "/assets/author/social/instagram.svg",
+              "path": ""
+            },
+            {
+              "icon": "/assets/author/social/linkedin.svg",
+              "path": "https://www.linkedin.com/in/higor-braga-99010ba1/"
+            }
+          ]
+        }
+      ],
+      "recommended": false
+    },
+    {
+      "id": "5",
+      "type": "art",
+      "img_sm": "/assets/categories/img/art/1-sm.png",
+      "img_lg": "/assets/categories/img/art/1-lg.png",
+      "date": "2025-02-10",
+      "hour": "18:00",
+      "title": "Art Nouveau Exhibition",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.",
+      "author": [
+        {
+          "img_avatar": "/assets/author/author-avt-2.png",
+          "name": "Gabriela Laforgia",
+          "social": [
+            {
+              "icon": "/assets/author/social/x.svg",
+              "path": ""
+            },
+            {
+              "icon": "/assets/author/social/instagram.svg",
+              "path": ""
+            },
+            {
+              "icon": "/assets/author/social/linkedin.svg",
+              "path": "https://www.linkedin.com/in/gabriela-laforgia-34632050/"
+            }
+          ]
+        }
+      ],
+      "recommended": false
+    },
+    {
+      "id": "6",
+      "type": "food",
+      "img_sm": "/assets/categories/img/food/1-sm.png",
+      "img_lg": "/assets/categories/img/food/1-lg.png",
+      "date": "2025-02-20",
+      "hour": "14:00",
+      "title": "Gourmet Food Festival",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.",
+      "author": [
+        {
+          "img_avatar": "/assets/author/author-avt-3.png",
+          "name": "Adriano Santos",
+          "social": [
+            {
+              "icon": "/assets/author/social/x.svg",
+              "path": ""
+            },
+            {
+              "icon": "/assets/author/social/instagram.svg",
+              "path": ""
+            },
+            {
+              "icon": "/assets/author/social/linkedin.svg",
+              "path": "https://www.linkedin.com/in/santosbio/"
+            }
+          ]
+        }
+      ],
+      "recommended": false
+    },
+    {
+      "id": "7",
+      "type": "food",
+      "img_sm": "/assets/categories/img/food/2-sm.png",
+      "img_lg": "/assets/categories/img/food/2-lg.png",
+      "date": "2025-03-10",
+      "hour": "12:00",
+      "title": "Vegan Delights Cooking Class",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.",
+      "author": [
+        {
+          "img_avatar": "/assets/author/author-avt-1.png",
+          "name": "Higor Braga",
+          "social": [
+            {
+              "icon": "/assets/author/social/x.svg",
+              "path": ""
+            },
+            {
+              "icon": "/assets/author/social/instagram.svg",
+              "path": ""
+            },
+            {
+              "icon": "/assets/author/social/linkedin.svg",
+              "path": "https://www.linkedin.com/in/higor-braga-99010ba1/"
+            }
+          ]
+        }
+      ],
+      "recommended": true
+    },
+    {
+      "id": "8",
+      "type": "sport",
+      "img_sm": "/assets/categories/img/sport/2-sm.png",
+      "img_lg": "/assets/categories/img/sport/2-lg.png",
+      "date": "2025-03-15",
+      "hour": "09:30",
+      "title": "International Cricket Tournament",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.",
+      "author": [
+        {
+          "img_avatar": "/assets/author/author-avt-2.png",
+          "name": "Gabriela Laforgia",
+          "social": [
+            {
+              "icon": "/assets/author/social/x.svg",
+              "path": ""
+            },
+            {
+              "icon": "/assets/author/social/instagram.svg",
+              "path": ""
+            },
+            {
+              "icon": "/assets/author/social/linkedin.svg",
+              "path": "https://www.linkedin.com/in/gabriela-laforgia-34632050/"
+            }
+          ]
+        }
+      ],
+      "recommended": true
+    },
+    {
+      "id": "9",
+      "type": "sport",
+      "img_sm": "/assets/categories/img/sport/1-sm.png",
+      "img_lg": "/assets/categories/img/sport/1-lg.png",
+      "date": "2025-04-10",
+      "hour": "16:00",
+      "title": "Basketball Championship Final",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.",
+      "author": [
+        {
+          "img_avatar": "/assets/author/author-avt-3.png",
+          "name": "Adriano Santos",
+          "social": [
+            {
+              "icon": "/assets/author/social/x.svg",
+              "path": ""
+            },
+            {
+              "icon": "/assets/author/social/instagram.svg",
+              "path": ""
+            },
+            {
+              "icon": "/assets/author/social/linkedin.svg",
+              "path": "https://www.linkedin.com/in/santosbio/"
+            }
+          ]
+        }
+      ],
+      "recommended": false
+    },
+    {
+      "id": "10",
+      "type": "music",
+      "img_sm": "/assets/categories/img/music/3-sm.png",
+      "img_lg": "/assets/categories/img/music/3-lg.png",
+      "date": "2025-04-25",
+      "hour": "20:00",
+      "title": "Classical Symphony Performance",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.",
+      "author": [
+        {
+          "img_avatar": "/assets/author/author-avt-1.png",
+          "name": "Higor Braga",
+          "social": [
+            {
+              "icon": "/assets/author/social/x.svg",
+              "path": ""
+            },
+            {
+              "icon": "/assets/author/social/instagram.svg",
+              "path": ""
+            },
+            {
+              "icon": "/assets/author/social/linkedin.svg",
+              "path": "https://www.linkedin.com/in/higor-braga-99010ba1/"
+            }
+          ]
+        }
+      ],
+      "recommended": true
+    },
+    {
+      "id": "11",
+      "type": "food",
+      "img_sm": "/assets/categories/img/food/3-sm.png",
+      "img_lg": "/assets/categories/img/food/3-lg.png",
+      "date": "2025-05-01",
+      "hour": "14:00",
+      "title": "BBQ Feast Extravaganza",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.",
+      "author": [
+        {
+          "img_avatar": "/assets/author/author-avt-2.png",
+          "name": "Gabriela Laforgia",
+          "social": [
+            {
+              "icon": "/assets/author/social/x.svg",
+              "path": ""
+            },
+            {
+              "icon": "/assets/author/social/instagram.svg",
+              "path": ""
+            },
+            {
+              "icon": "/assets/author/social/linkedin.svg",
+              "path": "https://www.linkedin.com/in/gabriela-laforgia-34632050/"
+            }
+          ]
+        }
+      ],
+      "recommended": false
+    },
+    {
+      "id": "12",
+      "type": "sport",
+      "img_sm": "/assets/categories/img/sport/3-sm.png",
+      "img_lg": "/assets/categories/img/sport/3-lg.png",
+      "date": "2025-05-05",
+      "hour": "17:00",
+      "title": "Football World Cup Qualifiers",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.",
+      "author": [
+        {
+          "img_avatar": "/assets/author/author-avt-3.png",
+          "name": "Adriano Santos",
+          "social": [
+            {
+              "icon": "/assets/author/social/x.svg",
+              "path": ""
+            },
+            {
+              "icon": "/assets/author/social/instagram.svg",
+              "path": ""
+            },
+            {
+              "icon": "/assets/author/social/linkedin.svg",
+              "path": "https://www.linkedin.com/in/santosbio/"
+            }
+          ]
+        }
+      ],
+      "recommended": false
+    },
+    {
+      "id": "13",
+      "type": "art",
+      "img_sm": "/assets/categories/img/art/4-sm.png",
+      "img_lg": "/assets/categories/img/art/4-lg.png",
+      "date": "2025-05-10",
+      "hour": "18:00",
+      "title": "Modern Art Symposium",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.",
+      "author": [
+        {
+          "img_avatar": "/assets/author/author-avt-1.png",
+          "name": "Higor Braga",
+          "social": [
+            {
+              "icon": "/assets/author/social/x.svg",
+              "path": ""
+            },
+            {
+              "icon": "/assets/author/social/instagram.svg",
+              "path": ""
+            },
+            {
+              "icon": "/assets/author/social/linkedin.svg",
+              "path": "https://www.linkedin.com/in/higor-braga-99010ba1/"
+            }
+          ]
+        }
+      ],
+      "recommended": true
+    },
+    {
+      "id": "14",
+      "type": "music",
+      "img_sm": "/assets/categories/img/music/4-sm.png",
+      "img_lg": "/assets/categories/img/music/4-lg.png",
+      "date": "2025-05-15",
+      "hour": "19:00",
+      "title": "Opera Gala Performance",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.",
+      "author": [
+        {
+          "img_avatar": "/assets/author/author-avt-2.png",
+          "name": "Gabriela Laforgia",
+          "social": [
+            {
+              "icon": "/assets/author/social/x.svg",
+              "path": ""
+            },
+            {
+              "icon": "/assets/author/social/instagram.svg",
+              "path": ""
+            },
+            {
+              "icon": "/assets/author/social/linkedin.svg",
+              "path": "https://www.linkedin.com/in/gabriela-laforgia-34632050/"
+            }
+          ]
+        }
+      ],
+      "recommended": false
+    },
+    {
+      "id": "15",
+      "type": "food",
+      "img_sm": "/assets/categories/img/food/4-sm.png",
+      "img_lg": "/assets/categories/img/food/4-lg.png",
+      "date": "2025-05-20",
+      "hour": "13:00",
+      "title": "Sushi Masterclass",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.",
+      "author": [
+        {
+          "img_avatar": "/assets/author/author-avt-3.png",
+          "name": "Adriano Santos",
+          "social": [
+            {
+              "icon": "/assets/author/social/x.svg",
+              "path": ""
+            },
+            {
+              "icon": "/assets/author/social/instagram.svg",
+              "path": ""
+            },
+            {
+              "icon": "/assets/author/social/linkedin.svg",
+              "path": "https://www.linkedin.com/in/santosbio/"
+            }
+          ]
+        }
+      ],
+      "recommended": true
+    },
+    {
+      "id": "16",
+      "type": "sport",
+      "img_sm": "/assets/categories/img/sport/4-sm.png",
+      "img_lg": "/assets/categories/img/sport/4-lg.png",
+      "date": "2025-05-25",
+      "hour": "10:00",
+      "title": "Tennis Open Championship",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.",
+      "author": [
+        {
+          "img_avatar": "/assets/author/author-avt-1.png",
+          "name": "Higor Braga",
+          "social": [
+            {
+              "icon": "/assets/author/social/x.svg",
+              "path": ""
+            },
+            {
+              "icon": "/assets/author/social/instagram.svg",
+              "path": ""
+            },
+            {
+              "icon": "/assets/author/social/linkedin.svg",
+              "path": "https://www.linkedin.com/in/higor-braga-99010ba1/"
+            }
+          ]
+        }
+      ],
+      "recommended": false
+    },
+    {
+      "id": "17",
+      "type": "art",
+      "img_sm": "/assets/categories/img/art/5-sm.png",
+      "img_lg": "/assets/categories/img/art/5-lg.png",
+      "date": "2025-06-01",
+      "hour": "11:00",
+      "title": "Photography Exhibition",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.",
+      "author": [
+        {
+          "img_avatar": "/assets/author/author-avt-2.png",
+          "name": "Gabriela Laforgia",
+          "social": [
+            {
+              "icon": "/assets/author/social/x.svg",
+              "path": ""
+            },
+            {
+              "icon": "/assets/author/social/instagram.svg",
+              "path": ""
+            },
+            {
+              "icon": "/assets/author/social/linkedin.svg",
+              "path": "https://www.linkedin.com/in/gabriela-laforgia-34632050/"
+            }
+          ]
+        }
+      ],
+      "recommended": false
+    },
+    {
+      "id": "18",
+      "type": "music",
+      "img_sm": "/assets/categories/img/music/5-sm.png",
+      "img_lg": "/assets/categories/img/music/5-lg.png",
+      "date": "2025-06-05",
+      "hour": "20:00",
+      "title": "Indie Rock Festival",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.",
+      "author": [
+        {
+          "img_avatar": "/assets/author/author-avt-3.png",
+          "name": "Adriano Santos",
+          "social": [
+            {
+              "icon": "/assets/author/social/x.svg",
+              "path": ""
+            },
+            {
+              "icon": "/assets/author/social/instagram.svg",
+              "path": ""
+            },
+            {
+              "icon": "/assets/author/social/linkedin.svg",
+              "path": "https://www.linkedin.com/in/santosbio/"
+            }
+          ]
+        }
+      ],
+      "recommended": false
+    },
+    {
+      "id": "19",
+      "type": "food",
+      "img_sm": "/assets/categories/img/food/5-sm.png",
+      "img_lg": "/assets/categories/img/food/5-lg.png",
+      "date": "2025-06-10",
+      "hour": "12:00",
+      "title": "Vegan Food Festival",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.",
+      "author": [
+        {
+          "img_avatar": "/assets/author/author-avt-2.png",
+          "name": "Gabriela Laforgia",
+          "social": [
+            {
+              "icon": "/assets/author/social/x.svg",
+              "path": ""
+            },
+            {
+              "icon": "/assets/author/social/instagram.svg",
+              "path": ""
+            },
+            {
+              "icon": "/assets/author/social/linkedin.svg",
+              "path": "https://www.linkedin.com/in/gabriela-laforgia-34632050/"
+            }
+          ]
+        }
+      ],
+      "recommended": true
+    }
+  ]
+}
