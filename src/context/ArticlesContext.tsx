@@ -76,7 +76,11 @@ export function ArticlesProvider({ children }: ArticlesProviderProps) {
    }, [articles, appliedFilters.searchTerm]);
 
    const handleSubmit = useCallback(() => {
+      setIsLoading(true);
       setAppliedFilters({ searchTerm });
+      setTimeout(() => {
+         setIsLoading(false);
+      }, 2500);
    }, [searchTerm]);
 
    const handleClearSearch = useCallback(() => {
