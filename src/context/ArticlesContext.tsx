@@ -12,7 +12,7 @@ import {
    ArticlesContextValue,
    ArticlesProviderProps,
    Filters,
-} from "./types";
+} from "../types";
 
 export const ArticlesContext = createContext<ArticlesContextValue>(
    {} as ArticlesContextValue
@@ -20,12 +20,20 @@ export const ArticlesContext = createContext<ArticlesContextValue>(
 
 export function ArticlesProvider({ children }: ArticlesProviderProps) {
    const [articles, setArticles] = useState<Article[]>([]);
-   const [isLoading, setIsLoading] = useState(false);
+   const [isLoading, setIsLoading] = useState<boolean>(false);
    const [error, setError] = useState<string | null>(null);
+   const [showArticlesList, setShowArticlesList] = useState<boolean>(false);
 
-   const [searchTerm, setSearchTerm] = useState("");
+   const [searchTerm, setSearchTerm] = useState<string>("");
+   const [selectedAuthor, setSelectedAuthor] = useState<string>("");
+   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
+   const [selectedType, setSelectedType] = useState<string>("");
+
    const [appliedFilters, setAppliedFilters] = useState<Filters>({
       searchTerm: "",
+      selectedAuthor: "",
+      selectedDate: null as Date | null,
+      selectedType: "",
    });
 
    useEffect(() => {
@@ -60,32 +68,76 @@ export function ArticlesProvider({ children }: ArticlesProviderProps) {
 
    const filteredArticles = useMemo(() => {
       const term = appliedFilters.searchTerm.toLowerCase().trim();
-      if (!term) return articles;
+      const authorFilter = (appliedFilters.selectedAuthor ?? "")
+         .toLowerCase()
+         .trim();
+      const today = appliedFilters.selectedDate;
+
+      const selectedDateString = today
+         ? today.toISOString().slice(0, 10)
+         : null;
 
       return articles.filter((article) => {
-         const inType = article.type.toLowerCase().includes(term);
-         const inDate = article.date.toLowerCase().includes(term);
-         const inTitle = article.title.toLowerCase().includes(term);
-         const inDescription = article.description.toLowerCase().includes(term);
-         const inAuthor = article.author.some((a) =>
-            a.name.toLowerCase().includes(term)
-         );
+         const matchesTerm =
+            term === "" ||
+            [
+               article.type,
+               article.date,
+               article.title,
+               article.description,
+            ].some((field) => field.toLowerCase().includes(term)) ||
+            article.author.some((a) => a.name.toLowerCase().includes(term));
 
-         return inType || inDate || inTitle || inDescription || inAuthor;
+         const matchesAuthor =
+            authorFilter === "" ||
+            authorFilter === "Todos os autores" ||
+            article.author.some((a) => a.name.toLowerCase() === authorFilter);
+
+         const matchesDate = selectedDateString
+            ? article.date === selectedDateString
+            : true;
+
+         const matchesType = appliedFilters.selectedType
+            ? article.type.toLowerCase() ===
+              appliedFilters.selectedType.toLowerCase()
+            : true;
+
+         return matchesTerm && matchesAuthor && matchesDate && matchesType;
       });
-   }, [articles, appliedFilters.searchTerm]);
+   }, [
+      appliedFilters.searchTerm,
+      appliedFilters.selectedAuthor,
+      appliedFilters.selectedDate,
+      appliedFilters.selectedType,
+      articles,
+   ]);
 
    const handleSubmit = useCallback(() => {
       setIsLoading(true);
-      setAppliedFilters({ searchTerm });
+      setShowArticlesList(true);
+      setAppliedFilters({
+         searchTerm,
+         selectedAuthor,
+         selectedDate,
+         selectedType,
+      });
       setTimeout(() => {
          setIsLoading(false);
       }, 2500);
-   }, [searchTerm]);
+   }, [searchTerm, selectedAuthor, selectedDate, selectedType]);
 
    const handleClearSearch = useCallback(() => {
       setSearchTerm("");
-      setAppliedFilters({ searchTerm: "" });
+      setAppliedFilters({
+         searchTerm: "",
+         selectedAuthor: "",
+         selectedDate: null,
+         selectedType: "",
+      });
+      setShowArticlesList(false);
+      setSelectedAuthor("");
+      setSelectedDate(null);
+      setSelectedType("");
    }, []);
 
    const contextValue = useMemo<ArticlesContextValue>(
@@ -98,6 +150,13 @@ export function ArticlesProvider({ children }: ArticlesProviderProps) {
          setSearchTerm,
          handleSubmit,
          handleClearSearch,
+         showArticlesList,
+         selectedAuthor,
+         setSelectedAuthor,
+         selectedDate,
+         setSelectedDate,
+         selectedType,
+         setSelectedType,
       }),
       [
          articles,
@@ -107,6 +166,13 @@ export function ArticlesProvider({ children }: ArticlesProviderProps) {
          searchTerm,
          handleSubmit,
          handleClearSearch,
+         showArticlesList,
+         selectedAuthor,
+         setSelectedAuthor,
+         selectedDate,
+         setSelectedDate,
+         selectedType,
+         setSelectedType,
       ]
    );
 
