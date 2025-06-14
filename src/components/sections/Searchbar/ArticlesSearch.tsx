@@ -1,9 +1,9 @@
 import { Input } from "@/components/ui/input";
 import { ArticlesContext } from "@/context/ArticlesContext";
-import { useCallback, useContext } from "react";
+import { JSX, useCallback, useContext } from "react";
 import { BiSearch } from "react-icons/bi";
 
-export function ArticlesSearch() {
+export function ArticlesSearch(): JSX.Element {
    const { searchTerm, setSearchTerm } = useContext(ArticlesContext);
 
    const handleChange = useCallback(

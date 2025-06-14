@@ -8,7 +8,7 @@ interface SkeletonGridProps {
 }
 
 export function SkeletonGrid({
-   itemCount = 4,
+   itemCount = 12,
 }: SkeletonGridProps): JSX.Element {
    const placeholders = Array.from({ length: itemCount });
 

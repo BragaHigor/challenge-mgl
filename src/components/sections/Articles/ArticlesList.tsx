@@ -2,9 +2,9 @@
 
 import { ArticlesContext } from "@/context/ArticlesContext";
 import { JSX, useContext } from "react";
-import { Articles } from "./Articles";
+import { ArticlesCard } from "./ArticlesCard";
 import { SkeletonGrid } from "../SkeletonGrid/SkeletonGrid";
-import { Article } from "@/context/types";
+import { Article } from "@/types";
 
 export function ArticlesList(): JSX.Element {
    const { filteredArticles, isLoading, error } = useContext(ArticlesContext);
@@ -31,18 +31,23 @@ export function ArticlesList(): JSX.Element {
 
    if (filteredArticles.length === 0) {
       return (
-         <section aria-live="polite" className="p-4 text-center">
-            <p>Nenhum artigo encontrado.</p>
+         <section aria-live="polite" className="h-[80vh]">
+            <p className="text-white/80 text-center mt-6">
+               Nenhum artigo encontrado.
+            </p>
          </section>
       );
    }
 
    return (
       <section aria-label="Lista de artigos">
-         <ul>
+         <h4 className="h4 mb-6">
+            {filteredArticles.length} resultados encontrados.
+         </h4>
+         <ul className="grid grid-cols-1 xl:grid-cols-4 gap-[1.875rem] mb-32">
             {filteredArticles.map((article: Article) => (
                <li key={article.id}>
-                  <Articles articles={article} />
+                  <ArticlesCard article={article} />
                </li>
             ))}
          </ul>
