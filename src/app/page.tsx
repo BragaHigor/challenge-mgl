@@ -2,19 +2,15 @@
 
 import { useContext } from "react";
 import { ArticlesList } from "@/components/sections/Articles/ArticlesList";
-import { Searchbar } from "@/components/sections/Searchbar/Searchbar";
 import { ArticlesContext } from "@/context/ArticlesContext";
+import { Hero } from "@/components/sections/Hero/Hero";
 
 export default function Home() {
-   const { showArticlesList, handleClearSearch } = useContext(ArticlesContext);
+   const { showArticlesList } = useContext(ArticlesContext);
    return (
       <div>
-         <div className="flex flex-col justify-center items-center">
-            <Searchbar />
-            <button className="text-accent" onClick={() => handleClearSearch()}>
-               limpar busca
-            </button>
-         </div>
+         <Hero />
+         <div className="flex flex-col justify-center items-center"></div>
          {showArticlesList ? (
             <div className="container mx-auto">
                <ArticlesList />

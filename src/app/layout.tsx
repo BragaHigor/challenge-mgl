@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import type { Metadata } from "next";
 import { Poppins, Caveat } from "next/font/google";
 import { ArticlesProvider } from "@/context/ArticlesContext";
+import { Header } from "@/components/sections/Header/Header";
 
 export const metadata: Metadata = {
    title: "Create Next App",
@@ -31,6 +32,7 @@ export default function RootLayout({
             <body
                className={`${poppins.variable} ${caveat.variable} antialiased`}
             >
+               <Header />
                {children}
             </body>
          </html>
