@@ -38,7 +38,10 @@ export function ArticlesCarousel({
       >
          {articles.map((article) => (
             <SwiperSlide key={article.id} className="select-none">
-               <Link href="#" aria-label={`Ver artigo ${article.title}`}>
+               <Link
+                  href={`/articles/${article.id}`}
+                  aria-label={`Ver artigo ${article.title}`}
+               >
                   <ArticlesCard article={article} />
                </Link>
             </SwiperSlide>

@@ -1,6 +1,7 @@
+import { ArticlesContext } from "@/context/ArticlesContext";
 import { Article } from "@/types";
 import Image from "next/image";
-import { JSX } from "react";
+import { JSX, useContext } from "react";
 import { BiCalendar, BiTime, BiUser } from "react-icons/bi";
 
 interface ArticleCardProps {
@@ -8,6 +9,11 @@ interface ArticleCardProps {
 }
 
 export function ArticlesCard({ article }: ArticleCardProps): JSX.Element {
+   const { formatDate } = useContext(ArticlesContext);
+
+   const dbDate = article.date;
+   const formattedDate = formatDate(dbDate);
+
    return (
       <article className="bg-white/5 hover:bg-white/10 transition-colors rounded-3xl overflow-hidden flex flex-col justify-start h-[27.5rem] w-[20rem] sm:w-full mx-auto sm:mx-0 p-4">
          <div className="relative w-full h-[20rem] mb-10">
@@ -28,8 +34,11 @@ export function ArticlesCard({ article }: ArticleCardProps): JSX.Element {
                <div className="flex items-center text-accent mb-2 gap-3">
                   <div className="flex items-center gap-1">
                      <BiCalendar aria-hidden="true" />
-                     <time dateTime={article.date} className="text-[0.9375rem]">
-                        {article.date}
+                     <time
+                        dateTime={formattedDate}
+                        className="text-[0.9375rem]"
+                     >
+                        {formattedDate}
                      </time>
                   </div>
                   <div className="flex items-center gap-1">
