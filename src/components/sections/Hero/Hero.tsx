@@ -1,8 +1,8 @@
-import { useCallback, useContext } from "react";
+import { JSX, useCallback, useContext } from "react";
 import { Searchbar } from "../Searchbar/Searchbar";
 import { ArticlesContext } from "@/context/ArticlesContext";
 
-export function Hero() {
+export function Hero(): JSX.Element {
    const { handleClearSearch } = useContext(ArticlesContext);
 
    const onClear = useCallback(() => {
