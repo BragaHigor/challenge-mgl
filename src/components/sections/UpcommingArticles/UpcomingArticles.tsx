@@ -62,7 +62,7 @@ export function UpcomingArticles(): JSX.Element {
                </TabsList>
             </Tabs>
             <Link
-               href="#"
+               href={"/articles"}
                className="uppercase border-b-2 border-accent text-sm font-semibold text-accent"
             >
                Ver todos os artigos
