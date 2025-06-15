@@ -1,19 +1,24 @@
 "use client";
 
-import { useCallback, useContext, useMemo, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { JSX, useCallback, useContext, useMemo, useState } from "react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ArticlesContext } from "@/context/ArticlesContext";
-import { ArticlesCard } from "../Articles/ArticlesCard";
-import { SkeletonGrid } from "../SkeletonGrid/SkeletonGrid";
 import Link from "next/link";
 import Image from "next/image";
 import { Article } from "@/types";
+import { ArticlesCarousel } from "../Carousel/ArticlesCarousel";
 
-export function UpcomingArticles() {
+const CATEGORY_CONFIG = [
+   { value: "all", label: "Todos", icon: null },
+   { value: "sport", label: "Sport", icon: "/assets/categories/sport.svg" },
+   { value: "music", label: "Music", icon: "/assets/categories/music.svg" },
+   { value: "food", label: "Food", icon: "/assets/categories/food.svg" },
+   { value: "art", label: "Art", icon: "/assets/categories/art.svg" },
+];
+
+export function UpcomingArticles(): JSX.Element {
    const { articles } = useContext(ArticlesContext);
    const [category, setCategory] = useState<string>("all");
 
@@ -40,54 +45,22 @@ export function UpcomingArticles() {
                className="bg-transparent w-full max-w-[37.5rem] h-full flex justify-center items-center mb-12 xl:mb-0"
             >
                <TabsList className="flex flex-col lg:flex-row gap-6 bg-transparent w-full h-full">
-                  <TabsTrigger value="all">Todos</TabsTrigger>
-                  <TabsTrigger value="sport">
-                     <span aria-hidden="true" className="mr-2">
-                        <Image
-                           src="/assets/categories/sport.svg"
-                           width={18}
-                           height={18}
-                           alt=""
-                        />
-                     </span>
-                     Sport
-                  </TabsTrigger>
-                  <TabsTrigger value="music">
-                     <span aria-hidden="true" className="mr-2">
-                        <Image
-                           src="/assets/categories/music.svg"
-                           width={18}
-                           height={18}
-                           alt=""
-                        />
-                     </span>
-                     Music
-                  </TabsTrigger>
-                  <TabsTrigger value="food">
-                     <span aria-hidden="true" className="mr-2">
-                        <Image
-                           src="/assets/categories/food.svg"
-                           width={18}
-                           height={18}
-                           alt=""
-                        />
-                     </span>
-                     Food
-                  </TabsTrigger>
-                  <TabsTrigger value="art">
-                     <span aria-hidden="true" className="mr-2">
-                        <Image
-                           src="/assets/categories/art.svg"
-                           width={18}
-                           height={18}
-                           alt=""
-                        />
-                     </span>
-                     Art
-                  </TabsTrigger>
+                  {CATEGORY_CONFIG.map(({ value, label, icon }) => (
+                     <TabsTrigger
+                        key={value}
+                        value={value}
+                        className="flex items-center"
+                     >
+                        {icon && (
+                           <span aria-hidden="true" className="mr-2">
+                              <Image src={icon} width={18} height={18} alt="" />
+                           </span>
+                        )}
+                        {label}
+                     </TabsTrigger>
+                  ))}
                </TabsList>
             </Tabs>
-
             <Link
                href="#"
                className="uppercase border-b-2 border-accent text-sm font-semibold text-accent"
@@ -95,30 +68,7 @@ export function UpcomingArticles() {
                Ver todos os artigos
             </Link>
          </div>
-         {filteredArticles.length > 0 ? (
-            <Swiper
-               slidesPerView={1}
-               spaceBetween={30}
-               pagination={{ dynamicBullets: true, clickable: true }}
-               breakpoints={{
-                  640: { slidesPerView: 2 },
-                  1024: { slidesPerView: 3 },
-                  1310: { slidesPerView: 4 },
-               }}
-               modules={[Pagination]}
-               className="w-full h-[31.25rem]"
-            >
-               {filteredArticles.map((article) => (
-                  <SwiperSlide key={article.id} className="select-none">
-                     <Link href="">
-                        <ArticlesCard article={article} />
-                     </Link>
-                  </SwiperSlide>
-               ))}
-            </Swiper>
-         ) : (
-            <SkeletonGrid itemCount={4} />
-         )}
+         <ArticlesCarousel articles={filteredArticles} />
       </section>
    );
 }
