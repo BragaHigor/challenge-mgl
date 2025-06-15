@@ -10,8 +10,8 @@ export function Header(): JSX.Element {
                <Link href="/" aria-label="Ir para a página inicial">
                   <Image
                      src="/assets/header/logo.svg"
-                     width={50}
-                     height={50}
+                     width={30}
+                     height={30}
                      alt="Logo do Blog"
                      priority
                   />
