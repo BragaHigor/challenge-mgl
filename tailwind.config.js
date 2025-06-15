@@ -35,7 +35,7 @@ module.exports = {
                DEFAULT: "#B8B1A4",
                hover: "#A29C90",
             },
-            green: "#3F4F44",
+            newgreen: "#3F4F44",
          },
          backgroundImage: {
             hero_bg1: "url('/assets/hero/hero-bg-1.png')",

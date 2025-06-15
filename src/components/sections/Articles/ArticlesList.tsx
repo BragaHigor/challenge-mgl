@@ -5,6 +5,7 @@ import { JSX, useContext } from "react";
 import { ArticlesCard } from "./ArticlesCard";
 import { SkeletonGrid } from "../SkeletonGrid/SkeletonGrid";
 import { Article } from "@/types";
+import Link from "next/link";
 
 export function ArticlesList(): JSX.Element {
    const { filteredArticles, isLoading, error } = useContext(ArticlesContext);
@@ -40,14 +41,19 @@ export function ArticlesList(): JSX.Element {
    }
 
    return (
-      <section aria-label="Lista de artigos">
+      <section className="pt-20" aria-label="Lista de artigos">
          <h4 className="h4 mb-6">
             {filteredArticles.length} resultados encontrados.
          </h4>
          <ul className="grid grid-cols-1 xl:grid-cols-4 gap-[1.875rem] mb-32">
             {filteredArticles.map((article: Article) => (
                <li key={article.id}>
-                  <ArticlesCard article={article} />
+                  <Link
+                     href={`/articles/${article.id}`}
+                     aria-label={`Ver artigo ${article.title}`}
+                  >
+                     <ArticlesCard article={article} />
+                  </Link>
                </li>
             ))}
          </ul>

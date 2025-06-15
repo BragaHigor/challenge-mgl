@@ -11,22 +11,29 @@ import { AdsSection } from "@/components/sections/AdsSection/AdsSection";
 export default function Home() {
    const { showArticlesList } = useContext(ArticlesContext);
    return (
-      <div>
+      <>
          <Hero />
-         <div className="flex flex-col justify-center items-center"></div>
-         {showArticlesList ? (
-            <div className="container mx-auto">
-               <ArticlesList />
-            </div>
-         ) : (
-            <div>
-               <div className="container mx-auto">
-                  <UpcomingArticles />
-                  <AdsSection />
-                  <RecommendedArticles />
-               </div>
-            </div>
-         )}
-      </div>
+         <main className="container mx-auto px-4">
+            {showArticlesList ? (
+               <section aria-label="Lista de artigos" className="py-8">
+                  <ArticlesList />
+               </section>
+            ) : (
+               <>
+                  <section aria-label="Artigos populares" className="py-8">
+                     <UpcomingArticles />
+                  </section>
+
+                  <section aria-label="Anúncios promocionais" className="py-8">
+                     <AdsSection />
+                  </section>
+
+                  <section aria-label="Artigos recomendados" className="py-8">
+                     <RecommendedArticles />
+                  </section>
+               </>
+            )}
+         </main>
+      </>
    );
 }
