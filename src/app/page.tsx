@@ -5,6 +5,7 @@ import { ArticlesList } from "@/components/sections/Articles/ArticlesList";
 import { ArticlesContext } from "@/context/ArticlesContext";
 import { Hero } from "@/components/sections/Hero/Hero";
 import { UpcomingArticles } from "@/components/sections/UpcommingArticles/UpcomingArticles";
+import { RecommendedArticles } from "@/components/sections/RecommendedArticles/RecommendedArticles";
 
 export default function Home() {
    const { showArticlesList } = useContext(ArticlesContext);
@@ -21,7 +22,7 @@ export default function Home() {
                <div className="container mx-auto">
                   <UpcomingArticles />
                   <div>SEÇÃO DE PROPAGANDA</div>
-                  <div>ARTIGOS RECOMENDADOS</div>
+                  <RecommendedArticles />
                </div>
             </div>
          )}
