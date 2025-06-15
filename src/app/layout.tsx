@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Poppins, Caveat } from "next/font/google";
 import { ArticlesProvider } from "@/context/ArticlesContext";
 import { Header } from "@/components/sections/Header/Header";
+import { Footer } from "@/components/sections/Footer/Footer";
 
 export const metadata: Metadata = {
    title: "Create Next App",
@@ -34,6 +35,7 @@ export default function RootLayout({
             >
                <Header />
                {children}
+               <Footer />
             </body>
          </html>
       </ArticlesProvider>
