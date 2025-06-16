@@ -28,16 +28,15 @@ export default function RootLayout({
    children: React.ReactNode;
 }>) {
    return (
-      <ArticlesProvider>
-         <html lang="pt-br">
-            <body
-               className={`${poppins.variable} ${caveat.variable} antialiased`}
-            >
+      <html lang="pt-BR">
+         <head />
+         <body className={`${poppins.variable} ${caveat.variable} antialiased`}>
+            <ArticlesProvider>
                <Header />
                {children}
                <Footer />
-            </body>
-         </html>
-      </ArticlesProvider>
+            </ArticlesProvider>
+         </body>
+      </html>
    );
 }
