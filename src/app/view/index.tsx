@@ -1,6 +1,7 @@
 "use client";
 
 import React, { ReactElement, useContext } from "react";
+import Head from "next/head";
 import { ArticlesContext } from "@/context/ArticlesContext";
 import { Hero } from "@/components/sections/Hero/Hero";
 import { ArticlesList } from "@/components/sections/Articles/ArticlesList";
@@ -13,6 +14,13 @@ export default function HomeView(): ReactElement {
 
    return (
       <>
+         <Head>
+            <title>Página Inicial | Blog</title>
+            <meta
+               name="description"
+               content="Bem-vindo ao Blog: seu hub de arte, música e lifestyle."
+            />
+         </Head>
          <Hero />
          <main className="container mx-auto px-4">
             {showArticlesList ? (
