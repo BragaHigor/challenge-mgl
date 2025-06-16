@@ -28,7 +28,7 @@ h6 {
 }
 
 .h4 {
-   @apply text-lg;
+   @apply text-sm;
 }
 
 .pretitle {

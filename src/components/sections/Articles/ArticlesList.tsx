@@ -41,8 +41,8 @@ export function ArticlesList(): JSX.Element {
    }
 
    return (
-      <section className="pt-20" aria-label="Lista de artigos">
-         <h4 className="h4 mb-6">
+      <section aria-label="Lista de artigos">
+         <h4 className="text-lg mb-6">
             {filteredArticles.length} resultados encontrados.
          </h4>
          <ul className="grid grid-cols-1 xl:grid-cols-4 gap-[1.875rem] mb-32">

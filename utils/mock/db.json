@@ -2,12 +2,12 @@
   "articles": [
     {
       "id": "1",
-      "type": "music",
+      "type": "musica",
       "img_sm": "/assets/categories/img/music/1-sm.png",
       "img_lg": "/assets/categories/img/music/1-lg.png",
       "date": "2025-01-05",
       "hour": "20:00",
-      "title": "Rock Legends Live Concert",
+      "title": "Concerto Épico: Quando as Lendas do Rock se Reúnem",
       "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.",
       "author": [
         {
@@ -33,12 +33,12 @@
     },
     {
       "id": "2",
-      "type": "music",
+      "type": "musica",
       "img_sm": "/assets/categories/img/music/2-sm.png",
       "img_lg": "/assets/categories/img/music/2-lg.png",
       "date": "2025-01-15",
       "hour": "19:00",
-      "title": "Jazz Night Live",
+      "title": "Deixe a Música Te Levar: Viva uma Noite de Jazz Inesquecível",
       "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.",
       "author": [
         {
@@ -64,12 +64,12 @@
     },
     {
       "id": "3",
-      "type": "art",
+      "type": "arte",
       "img_sm": "/assets/categories/img/art/3-sm.png",
       "img_lg": "/assets/categories/img/art/3-lg.png",
       "date": "2025-01-20",
       "hour": "10:00",
-      "title": "Street Art Festival",
+      "title": "Festival de Arte de Rua: Cores e Criatividade nas Ruas!",
       "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.",
       "author": [
         {
@@ -95,12 +95,12 @@
     },
     {
       "id": "4",
-      "type": "art",
+      "type": "arte",
       "img_sm": "/assets/categories/img/art/2-sm.png",
       "img_lg": "/assets/categories/img/art/2-lg.png",
       "date": "2025-02-01",
       "hour": "11:00",
-      "title": "Impressionist Art Exhibition",
+      "title": "Beleza em Pinceladas: Uma Viagem pela Exposição de Arte Impressionista",
       "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.paintings.",
       "author": [
         {
@@ -126,12 +126,12 @@
     },
     {
       "id": "5",
-      "type": "art",
+      "type": "arte",
       "img_sm": "/assets/categories/img/art/1-sm.png",
       "img_lg": "/assets/categories/img/art/1-lg.png",
       "date": "2025-02-10",
       "hour": "18:00",
-      "title": "Art Nouveau Exhibition",
+      "title": "Art Nouveau em Destaque: Descubra a Elegância e Inovação Desta Exposição",
       "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.",
       "author": [
         {
@@ -157,12 +157,12 @@
     },
     {
       "id": "6",
-      "type": "food",
+      "type": "comida",
       "img_sm": "/assets/categories/img/food/1-sm.png",
       "img_lg": "/assets/categories/img/food/1-lg.png",
       "date": "2025-02-20",
       "hour": "14:00",
-      "title": "Gourmet Food Festival",
+      "title": "Festival de Comida Gourmet: Uma Jornada Culinária Inesquecível!",
       "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.",
       "author": [
         {
@@ -188,12 +188,12 @@
     },
     {
       "id": "7",
-      "type": "food",
+      "type": "comida",
       "img_sm": "/assets/categories/img/food/2-sm.png",
       "img_lg": "/assets/categories/img/food/2-lg.png",
       "date": "2025-03-10",
       "hour": "12:00",
-      "title": "Vegan Delights Cooking Class",
+      "title": "Sabores Veganos: Aprenda com a Aula Vegan Delights!",
       "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.",
       "author": [
         {
@@ -219,12 +219,12 @@
     },
     {
       "id": "8",
-      "type": "sport",
+      "type": "esporte",
       "img_sm": "/assets/categories/img/sport/2-sm.png",
       "img_lg": "/assets/categories/img/sport/2-lg.png",
       "date": "2025-03-15",
       "hour": "09:30",
-      "title": "International Cricket Tournament",
+      "title": "Torneio Internacional de Críquete: Não Perca Essa Disputa Épica!",
       "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.",
       "author": [
         {
@@ -250,12 +250,12 @@
     },
     {
       "id": "9",
-      "type": "sport",
+      "type": "esporte",
       "img_sm": "/assets/categories/img/sport/1-sm.png",
       "img_lg": "/assets/categories/img/sport/1-lg.png",
       "date": "2025-04-10",
       "hour": "16:00",
-      "title": "Basketball Championship Final",
+      "title": "Basquete em Foco: Tudo Sobre a Decisão do Campeonato!",
       "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.",
       "author": [
         {
@@ -281,12 +281,12 @@
     },
     {
       "id": "10",
-      "type": "music",
+      "type": "musica",
       "img_sm": "/assets/categories/img/music/3-sm.png",
       "img_lg": "/assets/categories/img/music/3-lg.png",
       "date": "2025-04-25",
       "hour": "20:00",
-      "title": "Classical Symphony Performance",
+      "title": "Noite de Gala: Uma Apresentação de Sinfonia Clássica Imperdível",
       "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.",
       "author": [
         {
@@ -312,12 +312,12 @@
     },
     {
       "id": "11",
-      "type": "food",
+      "type": "comida",
       "img_sm": "/assets/categories/img/food/3-sm.png",
       "img_lg": "/assets/categories/img/food/3-lg.png",
       "date": "2025-05-01",
       "hour": "14:00",
-      "title": "BBQ Feast Extravaganza",
+      "title": "Churrasco Extravagante: Guia para a Festa Perfeita!",
       "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.",
       "author": [
         {
@@ -343,12 +343,12 @@
     },
     {
       "id": "12",
-      "type": "sport",
+      "type": "esporte",
       "img_sm": "/assets/categories/img/sport/3-sm.png",
       "img_lg": "/assets/categories/img/sport/3-lg.png",
       "date": "2025-05-05",
       "hour": "17:00",
-      "title": "Football World Cup Qualifiers",
+      "title": "Rumo à Copa: Tudo Sobre as Eliminatórias de Futebol!",
       "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.",
       "author": [
         {
@@ -374,12 +374,12 @@
     },
     {
       "id": "13",
-      "type": "art",
+      "type": "arte",
       "img_sm": "/assets/categories/img/art/4-sm.png",
       "img_lg": "/assets/categories/img/art/4-lg.png",
       "date": "2025-05-10",
       "hour": "18:00",
-      "title": "Modern Art Symposium",
+      "title": "Simpósio de Arte Moderna: Explore as Novas Tendências!",
       "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.",
       "author": [
         {
@@ -405,12 +405,12 @@
     },
     {
       "id": "14",
-      "type": "music",
+      "type": "musica",
       "img_sm": "/assets/categories/img/music/4-sm.png",
       "img_lg": "/assets/categories/img/music/4-lg.png",
       "date": "2025-05-15",
       "hour": "19:00",
-      "title": "Opera Gala Performance",
+      "title": "Os Melhores da Ópera: Destaques da Apresentação de Gala",
       "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.",
       "author": [
         {
@@ -436,12 +436,12 @@
     },
     {
       "id": "15",
-      "type": "food",
+      "type": "comida",
       "img_sm": "/assets/categories/img/food/4-sm.png",
       "img_lg": "/assets/categories/img/food/4-lg.png",
       "date": "2025-05-20",
       "hour": "13:00",
-      "title": "Sushi Masterclass",
+      "title": "Segredos do Sushi: O Que Você Vai Aprender na Masterclass!",
       "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.",
       "author": [
         {
@@ -467,12 +467,12 @@
     },
     {
       "id": "16",
-      "type": "sport",
+      "type": "esporte",
       "img_sm": "/assets/categories/img/sport/4-sm.png",
       "img_lg": "/assets/categories/img/sport/4-lg.png",
       "date": "2025-05-25",
       "hour": "10:00",
-      "title": "Tennis Open Championship",
+      "title": "Quadra Quente: Tudo Sobre o Campeonato Aberto de Tênis!",
       "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.",
       "author": [
         {
@@ -498,12 +498,12 @@
     },
     {
       "id": "17",
-      "type": "art",
+      "type": "arte",
       "img_sm": "/assets/categories/img/art/5-sm.png",
       "img_lg": "/assets/categories/img/art/5-lg.png",
       "date": "2025-06-01",
       "hour": "11:00",
-      "title": "Photography Exhibition",
+      "title": "Exposição de Fotografia: Uma Viagem Visual Que Você Precisa Fazer!",
       "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.",
       "author": [
         {
@@ -529,12 +529,12 @@
     },
     {
       "id": "18",
-      "type": "music",
+      "type": "musica",
       "img_sm": "/assets/categories/img/music/5-sm.png",
       "img_lg": "/assets/categories/img/music/5-lg.png",
       "date": "2025-06-05",
       "hour": "20:00",
-      "title": "Indie Rock Festival",
+      "title": "Festival de Indie Rock: Descubra as Bandas que Vão Agitar!",
       "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.",
       "author": [
         {
@@ -560,12 +560,12 @@
     },
     {
       "id": "19",
-      "type": "food",
+      "type": "comida",
       "img_sm": "/assets/categories/img/food/5-sm.png",
       "img_lg": "/assets/categories/img/food/5-lg.png",
       "date": "2025-06-10",
       "hour": "12:00",
-      "title": "Vegan Food Festival",
+      "title": "Festival de Comida Vegana: Sabores Incríveis para Todos!",
       "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.",
       "author": [
         {
