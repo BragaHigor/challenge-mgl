@@ -30,7 +30,7 @@ export function ArticlesInfo({ article }: ArticlesInfoProps) {
          </div>
          <div className="flex items-center gap-2">
             <BiLayer className="text-2xl text-accent" />
-            <p>Tema: {article.type}</p>
+            <p className="capitalize">Tema: {article.type}</p>
          </div>
       </div>
    );

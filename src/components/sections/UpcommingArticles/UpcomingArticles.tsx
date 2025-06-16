@@ -12,10 +12,10 @@ import { ArticlesCarousel } from "../Carousel/ArticlesCarousel";
 
 const CATEGORY_CONFIG = [
    { value: "all", label: "Todos", icon: null },
-   { value: "sport", label: "Sport", icon: "/assets/categories/sport.svg" },
-   { value: "music", label: "Music", icon: "/assets/categories/music.svg" },
-   { value: "food", label: "Food", icon: "/assets/categories/food.svg" },
-   { value: "art", label: "Art", icon: "/assets/categories/art.svg" },
+   { value: "esporte", label: "Esporte", icon: "/assets/categories/sport.svg" },
+   { value: "musica", label: "Música", icon: "/assets/categories/music.svg" },
+   { value: "comida", label: "Comida", icon: "/assets/categories/food.svg" },
+   { value: "arte", label: "Arte", icon: "/assets/categories/art.svg" },
 ];
 
 export function UpcomingArticles(): JSX.Element {
