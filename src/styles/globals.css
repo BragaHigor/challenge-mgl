@@ -61,7 +61,7 @@ h6 {
       transform: translateY(0px);
    }
    50% {
-      transform: translateY(-40px); /* maior amplitude */
+      transform: translateY(-40px);
    }
    100% {
       transform: translateY(0px);
@@ -69,13 +69,13 @@ h6 {
 }
 
 .animate-float {
-   animation: float 8s ease-in-out infinite; /* mais fluido e longo */
+   animation: float 10s ease-in-out infinite;
 }
 
 .animate-float-slow {
-   animation: float 12s ease-in-out infinite;
+   animation: float 14s ease-in-out infinite;
 }
 
 .animate-float-fast {
-   animation: float 6s ease-in-out infinite;
+   animation: float 8s ease-in-out infinite;
 }

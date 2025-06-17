@@ -12,7 +12,7 @@ export function Hero(): JSX.Element {
 
    return (
       <section className="h-screen xl:h-[50rem] mb-3 relative">
-         <BackgroundCircles />
+         <BackgroundCircles aria-hidden="true" />
          <div className="container mx-auto h-full flex flex-col justify-center items-center pt-12 xl:pt-0">
             <div className="w-full max-w-[43.75rem] text-center mx-auto flex flex-col gap-2">
                <div className="pretitle">
