@@ -6,16 +6,13 @@ import { ArticlesCard } from "./ArticlesCard";
 import { SkeletonGrid } from "../SkeletonGrid/SkeletonGrid";
 import { Article } from "@/types";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
 export function ArticlesList(): JSX.Element {
    const { filteredArticles, isLoading, error } = useContext(ArticlesContext);
 
    if (error) {
-      return (
-         <section role="alert" className="p-4 text-red-600">
-            <p>Erro: {error}</p>
-         </section>
-      );
+      return <section role="alert">{notFound()}</section>;
    }
 
    if (isLoading) {
@@ -49,7 +46,7 @@ export function ArticlesList(): JSX.Element {
             {filteredArticles.map((article: Article) => (
                <li key={article.id}>
                   <Link
-                     href={`/articles/${article.id}`}
+                     href={`/articles/${article.id}#article-info`}
                      aria-label={`Ver artigo ${article.title}`}
                   >
                      <ArticlesCard article={article} />

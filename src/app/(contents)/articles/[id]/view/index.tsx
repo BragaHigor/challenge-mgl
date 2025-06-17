@@ -22,7 +22,10 @@ export default function ArticlesDetailView({
          <section className="min-h-screen flex items-center py-8 sm:py-32">
             <div className="container mx-auto">
                <div className="w-full max-w-[37.5rem] xl:max-w-none mx-auto">
-                  <div className="relative xl:max-w-[41.875rem] h-[6.25rem] xl:h-[3.125rem] mt-16 sm:mt-0">
+                  <div
+                     id="article-info"
+                     className="relative xl:max-w-[41.875rem] h-[6.25rem] xl:h-[3.125rem] mt-16 sm:mt-0 scroll-mt-32"
+                  >
                      <ArticlesInfo article={article} />
                   </div>
                   <div className="flex flex-col gap-8 xl:gap-24 xl:flex-row pt-10 pb-12 sm:py-0 xl:mb-24">
