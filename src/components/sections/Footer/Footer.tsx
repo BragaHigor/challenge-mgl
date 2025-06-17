@@ -42,11 +42,13 @@ export function Footer(): JSX.Element {
 
    return (
       <footer className="bg-accent bg-pattern bg-cover bg-blend-multiply pt-16">
-         <div className="container mx-auto border-b border-white/40">
+         <div className="container mx-auto border-b border-primary/40">
             <div className="flex flex-col max-w-[46.875rem] mx-auto text-center">
                <div className="mb-9">
-                  <h2 className="h2 mb-3">Seus Artigos Sempre Com Você</h2>
-                  <p>
+                  <h2 className="h2 mb-3 text-primary">
+                     Seus Artigos Sempre Com Você
+                  </h2>
+                  <p className="text-primary">
                      Cadastre-se em nossa newsletter para receber artigos
                      exclusivos e dicas privilegiadas.
                   </p>
@@ -63,12 +65,12 @@ export function Footer(): JSX.Element {
                      name="email"
                      type="email"
                      placeholder="Digite seu e-mail"
-                     className="pl-8 w-full h-[3.75rem] rounded-full outline-none placeholder:text-primary/80 text-primary text-sm"
+                     className="pl-8 w-full h-[3.75rem] rounded-full outline-none placeholder:text-secondary/80 text-secondary text-sm"
                   />
                   <button
                      type="submit"
                      aria-label="Cadastrar newsletter"
-                     className="bg-secondary hover:bg-secondary-hover transition-colors w-[7.125rem] h-[3.25rem] rounded-full text-sm uppercase absolute right-1"
+                     className="text-primary bg-secondary hover:bg-secondary-hover transition-colors w-[7.125rem] h-[3.25rem] rounded-full text-sm uppercase absolute right-1"
                   >
                      Cadastre-se
                   </button>
@@ -88,7 +90,7 @@ export function Footer(): JSX.Element {
                   >
                      <Image src="/assets/footer/logo.svg" alt="Logo" fill />
                   </Link>
-                  <p className="text-sm">
+                  <p className="text-sm text-primary">
                      Copyright &copy; 2025. Todos os direitos reservados.
                   </p>
                </div>

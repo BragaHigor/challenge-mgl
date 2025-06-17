@@ -22,20 +22,22 @@ module.exports = {
       },
       extend: {
          colors: {
-            primary: "#2C3930",
+            primary: "#F7FAFC",
             accent: {
-               DEFAULT: "#946C50",
-               hover: "#A27B5C",
+               DEFAULT: "#1D4ED8",
+               hover: "#1E40AF",
             },
             secondary: {
-               DEFAULT: "#3F4F44",
-               hover: "#4F5F54",
+               DEFAULT: "#94A3B8",
+               hover: "#64748B",
             },
             tertiary: {
-               DEFAULT: "#B8B1A4",
-               hover: "#A29C90",
+               DEFAULT: "#E2E8F0",
+               hover: "#CBD5E0",
             },
-            newgreen: "#3F4F44",
+            text: "#1A202C",
+            lightText: "#4A5568",
+            white: "#FFFFFF",
          },
          backgroundImage: {
             hero_bg1: "url('/assets/hero/hero-bg-1.png')",

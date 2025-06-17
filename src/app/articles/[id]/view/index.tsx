@@ -31,11 +31,11 @@ export default function ArticlesDetailView({
                            src={article.img_lg}
                            fill
                            alt={article.title}
-                           className="object-cover mix-blend-lighten"
+                           className="object-cover"
                         />
                      </div>
                      <div className="flex w-full max-w-[28.75rem] flex-col justify-center gap-8 flex-1 sm:mb-12 xl:mb-0">
-                        <h2 className="text-lg xl:text-[2rem] leading-[120%] font-semibold mb-4">
+                        <h2 className="text-lg xl:text-[2rem] leading-[120%] font-semibold mb-4 text-accent">
                            {article.title}
                         </h2>
                         <div className="w-full max-w-[28.75rem]">
@@ -45,10 +45,10 @@ export default function ArticlesDetailView({
                   </div>
                   <div className="flex flex-col xl:flex-row gap-8 xl:gap-24">
                      <div className="w-full xl:max-w-[41.875rem] flex flex-col gap-8 xl:gap-12">
-                        <p className="text-tertiary">{article.description}</p>
-                        <p className="text-tertiary">{article.description}</p>
-                        <p className="text-tertiary">{article.description}</p>
-                        <p className="text-tertiary">{article.description}</p>
+                        <p className="text-accent">{article.description}</p>
+                        <p className="text-accent">{article.description}</p>
+                        <p className="text-accent">{article.description}</p>
+                        <p className="text-accent">{article.description}</p>
                      </div>
                   </div>
                </div>

@@ -32,7 +32,7 @@ export function ArticlesAuthorSearch(): JSX.Element {
 
    return (
       <div className="flex items-center gap-2.5 w-full xl:w-[11.875rem] select-none">
-         <span className="text-lg text-accent" aria-hidden="true">
+         <span className="text-lg text-primary" aria-hidden="true">
             <BiUser />
          </span>
          <Select
@@ -40,7 +40,7 @@ export function ArticlesAuthorSearch(): JSX.Element {
             onValueChange={handleChange}
             aria-label="Filtrar por autor"
          >
-            <SelectTrigger className="bg-transparent border-none focus:ring-0 focus:ring-offset-0 text-left p-0">
+            <SelectTrigger className="bg-transparent border-none focus:ring-0 focus:ring-offset-0 text-left p-0 text-primary">
                <SelectValue placeholder="Autores" />
             </SelectTrigger>
             <SelectContent>

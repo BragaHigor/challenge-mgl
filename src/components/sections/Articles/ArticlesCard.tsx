@@ -15,7 +15,7 @@ export function ArticlesCard({ article }: ArticleCardProps): JSX.Element {
    const formattedDate = formatDate(dbDate);
 
    return (
-      <article className="bg-white/5 hover:bg-white/10 transition-colors rounded-3xl overflow-hidden flex flex-col justify-start h-[27.5rem] w-[20rem] sm:w-full mx-auto sm:mx-0 p-4">
+      <article className="bg-secondary/20  hover:bg-secondary/50 transition-colors rounded-3xl overflow-hidden flex flex-col justify-start h-[27.5rem] w-[20rem] sm:w-full mx-auto sm:mx-0 p-4">
          <div className="relative w-full h-[20rem] mb-10">
             <Image
                src={article.img_sm}
@@ -25,7 +25,7 @@ export function ArticlesCard({ article }: ArticleCardProps): JSX.Element {
                sizes="(max-width: 640px) 100vw, 20rem"
                className="rounded-2xl object-cover"
             />
-            <span className="absolute -bottom-6 left-4 bg-accent w-[6.875rem] h-12 text-[0.8125rem] uppercase font-medium rounded-full flex items-center justify-center">
+            <span className="text-primary absolute -bottom-6 left-4 bg-accent w-[6.875rem] h-12 text-[0.8125rem] uppercase font-medium rounded-full flex items-center justify-center">
                {article.type}
             </span>
          </div>
@@ -36,22 +36,24 @@ export function ArticlesCard({ article }: ArticleCardProps): JSX.Element {
                      <BiCalendar aria-hidden="true" />
                      <time
                         dateTime={formattedDate}
-                        className="text-[0.9375rem]"
+                        className="text-[0.9375rem] text-lightText/70"
                      >
                         {formattedDate}
                      </time>
                   </div>
                   <div className="flex items-center gap-1">
                      <BiTime aria-hidden="true" />
-                     <span className="text-[0.9375rem]">{article.hour}</span>
+                     <span className="text-[0.9375rem] text-lightText/70">
+                        {article.hour}
+                     </span>
                   </div>
                </div>
 
-               <h4 className="h4">{article.title}</h4>
+               <h4 className="h4 ">{article.title}</h4>
             </div>
             <div className="flex items-center gap-2 pb-2">
                <BiUser aria-hidden="true" className="text-xl text-accent" />
-               <p className="text-sm font-light text-white/70">
+               <p className="text-sm font-light text-lightText/70">
                   {article.author[0].name}
                </p>
             </div>

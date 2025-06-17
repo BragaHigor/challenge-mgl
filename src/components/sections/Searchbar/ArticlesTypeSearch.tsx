@@ -30,7 +30,7 @@ export function ArticlesTypeSearch() {
 
    return (
       <div className="flex items-center gap-2.5 w-full xl:w-[11.875rem] select-none">
-         <span className="text-lg text-accent" aria-hidden="true">
+         <span className="text-lg text-primary" aria-hidden="true">
             <BiLayer />
          </span>
          <Select
@@ -38,7 +38,7 @@ export function ArticlesTypeSearch() {
             onValueChange={handleChange}
             aria-label="Filtrar por tema"
          >
-            <SelectTrigger className="bg-transparent border-none focus:ring-0 focus:ring-offset-0 text-left p-0 capitalize">
+            <SelectTrigger className="bg-transparent border-none focus:ring-0 focus:ring-offset-0 text-left p-0 capitalize text-primary">
                <SelectValue placeholder="Temas" />
             </SelectTrigger>
             <SelectContent>

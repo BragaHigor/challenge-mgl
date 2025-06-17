@@ -27,18 +27,18 @@ export function ArticlesDateSearch(): JSX.Element {
 
    return (
       <div className="flex items-center gap-2.5 w-full xl:w-[11.875rem] select-none">
-         <span className="text-lg text-accent" aria-hidden="true">
+         <span className="text-lg text-primary" aria-hidden="true">
             <BiCalendar />
          </span>
          <Popover>
             <PopoverTrigger asChild>
                <button
-                  className="flex items-center justify-between w-full bg-transparent border-none focus:ring-0 focus:outline-none text-left p-0 text-white"
+                  className="flex items-center justify-between w-full bg-transparent border-none focus:ring-0 focus:outline-none text-left p-0"
                   aria-label="Selecionar data"
                >
-                  <span className="truncate">{displayDate}</span>
+                  <span className="truncate text-primary">{displayDate}</span>
                   <BiChevronDown
-                     className="ml-2 text-[1.625rem]"
+                     className="ml-2 text-[1.625rem] text-primary"
                      aria-hidden="true"
                   />
                </button>
