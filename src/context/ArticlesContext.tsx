@@ -71,6 +71,9 @@ export function ArticlesProvider({ children }: ArticlesProviderProps) {
       const authorFilter = (appliedFilters.selectedAuthor ?? "")
          .toLowerCase()
          .trim();
+      const typeFilter = (appliedFilters.selectedType ?? "")
+         .toLowerCase()
+         .trim();
 
       return articles.filter((article) => {
          const matchesTerm =
@@ -85,7 +88,7 @@ export function ArticlesProvider({ children }: ArticlesProviderProps) {
 
          const matchesAuthor =
             authorFilter === "" ||
-            authorFilter === "Todos os autores" ||
+            authorFilter === "todos os autores" ||
             article.author.some((a) => a.name.toLowerCase() === authorFilter);
 
          const matchesDate = appliedFilters.selectedDate
@@ -93,10 +96,10 @@ export function ArticlesProvider({ children }: ArticlesProviderProps) {
               new Date(appliedFilters.selectedDate).toDateString()
             : true;
 
-         const matchesType = appliedFilters.selectedType
-            ? article.type.toLowerCase() ===
-              appliedFilters.selectedType.toLowerCase()
-            : true;
+         const matchesType =
+            typeFilter === "" ||
+            typeFilter === "todos os temas" ||
+            article.type.toLowerCase() === typeFilter;
 
          return matchesTerm && matchesAuthor && matchesDate && matchesType;
       });

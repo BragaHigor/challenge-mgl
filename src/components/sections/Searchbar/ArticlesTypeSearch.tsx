@@ -9,17 +9,18 @@ import {
    SelectTrigger,
    SelectValue,
 } from "@/components/ui/select";
-import { useCallback, useContext } from "react";
+import { useCallback, useContext, useMemo } from "react";
 import { ArticlesContext } from "@/context/ArticlesContext";
+import { getTriggerClassName } from "../../../../utils/functions/getTriggerClassName";
 
 export function ArticlesTypeSearch() {
    const { articles, selectedType, setSelectedType } =
       useContext(ArticlesContext);
 
-   const uniqueTypes = [
-      "Todos os temas",
-      ...new Set(articles.map((article) => article.type)),
-   ];
+   const uniqueTypes = useMemo(() => {
+      const types = articles.map((a) => a.type);
+      return ["Todos os temas", ...Array.from(new Set(types))];
+   }, [articles]);
 
    const handleChange = useCallback(
       (value: string) => {
@@ -27,6 +28,7 @@ export function ArticlesTypeSearch() {
       },
       [setSelectedType]
    );
+   const triggerClassName = getTriggerClassName(!!selectedType);
 
    return (
       <div className="flex items-center gap-2.5 w-full xl:w-[11.875rem] select-none">
@@ -38,17 +40,13 @@ export function ArticlesTypeSearch() {
             onValueChange={handleChange}
             aria-label="Filtrar por tema"
          >
-            <SelectTrigger className="bg-transparent border-none focus:ring-0 focus:ring-offset-0 text-left p-0 capitalize text-primary">
+            <SelectTrigger className={triggerClassName}>
                <SelectValue placeholder="Temas" />
             </SelectTrigger>
             <SelectContent>
                <SelectGroup>
                   {uniqueTypes.map((type) => (
-                     <SelectItem
-                        key={type}
-                        value={type === "Todos os temas" ? null : type}
-                        className="capitalize"
-                     >
+                     <SelectItem key={type} value={type} className="capitalize">
                         {type}
                      </SelectItem>
                   ))}
