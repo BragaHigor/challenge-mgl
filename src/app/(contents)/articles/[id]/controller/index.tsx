@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
    if (!res.ok) return { title: "Artigo não encontrado" };
    const article: Article = await res.json();
    return {
-      title: `Artigo | ${article.title}`,
+      title: `Artigo ${article.id} | ${article.title}`,
       description: article.description.slice(0, 150),
       openGraph: {
          title: article.title,
