@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-   @apply bg-primary text-white font-primary;
+   @apply bg-primary text-secondary font-primary;
 }
 
 h1,
@@ -16,7 +16,7 @@ h6 {
 }
 
 .h1 {
-   @apply text-4xl xl:text-[4.375rem] font-bold xl:leading-[4.875rem] uppercase;
+   @apply text-4xl xl:text-[4.375rem] font-bold xl:leading-[4.875rem] uppercase text-secondary;
 }
 
 .h2 {
@@ -28,7 +28,7 @@ h6 {
 }
 
 .h4 {
-   @apply text-sm;
+   @apply text-sm text-accent;
 }
 
 .pretitle {
@@ -54,4 +54,28 @@ h6 {
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
    @apply bg-accent;
+}
+
+@keyframes float {
+   0% {
+      transform: translateY(0px);
+   }
+   50% {
+      transform: translateY(-40px); /* maior amplitude */
+   }
+   100% {
+      transform: translateY(0px);
+   }
+}
+
+.animate-float {
+   animation: float 8s ease-in-out infinite; /* mais fluido e longo */
+}
+
+.animate-float-slow {
+   animation: float 12s ease-in-out infinite;
+}
+
+.animate-float-fast {
+   animation: float 6s ease-in-out infinite;
 }

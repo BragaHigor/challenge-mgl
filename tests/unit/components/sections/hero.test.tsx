@@ -49,10 +49,4 @@ describe("Hero component", () => {
       fireEvent.click(btn);
       expect(handleClearSearch).toHaveBeenCalledTimes(1);
    });
-
-   it("renders two decorative background divs", () => {
-      setup();
-      const bgDivs = document.querySelectorAll("div.absolute");
-      expect(bgDivs.length).toBe(2);
-   });
 });

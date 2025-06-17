@@ -18,7 +18,7 @@ export function ArticlesSearch(): JSX.Element {
          <label htmlFor="articles-search" className="sr-only">
             Buscar artigos
          </label>
-         <div className="text-lg text-accent" aria-hidden="true">
+         <div className="text-lg text-primary" aria-hidden="true">
             <BiSearch />
          </div>
          <Input
@@ -28,7 +28,7 @@ export function ArticlesSearch(): JSX.Element {
             placeholder="Pesquise aqui"
             onChange={handleChange}
             aria-label="Pesquisar artigos"
-            className="w-full p-0 bg-transparent border-0 focus-visible:ring-0 focus-visible:ring-offset-0"
+            className="w-full p-0 bg-transparent border-0 focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-primary text-primary"
          />
       </div>
    );

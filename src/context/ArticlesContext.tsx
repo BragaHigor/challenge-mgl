@@ -71,11 +71,6 @@ export function ArticlesProvider({ children }: ArticlesProviderProps) {
       const authorFilter = (appliedFilters.selectedAuthor ?? "")
          .toLowerCase()
          .trim();
-      const today = appliedFilters.selectedDate;
-
-      const selectedDateString = today
-         ? today.toISOString().slice(0, 10)
-         : null;
 
       return articles.filter((article) => {
          const matchesTerm =
@@ -93,8 +88,9 @@ export function ArticlesProvider({ children }: ArticlesProviderProps) {
             authorFilter === "Todos os autores" ||
             article.author.some((a) => a.name.toLowerCase() === authorFilter);
 
-         const matchesDate = selectedDateString
-            ? article.date === selectedDateString
+         const matchesDate = appliedFilters.selectedDate
+            ? new Date(article.date).toDateString() ===
+              new Date(appliedFilters.selectedDate).toDateString()
             : true;
 
          const matchesType = appliedFilters.selectedType
@@ -121,9 +117,7 @@ export function ArticlesProvider({ children }: ArticlesProviderProps) {
          selectedDate,
          selectedType,
       });
-      setTimeout(() => {
-         setIsLoading(false);
-      }, 2500);
+      setIsLoading(false);
    }, [searchTerm, selectedAuthor, selectedDate, selectedType]);
 
    const handleClearSearch = useCallback(() => {

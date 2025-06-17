@@ -9,9 +9,8 @@ interface Params {
 }
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
-   const res = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/articles/${params.id}`
-   );
+   const { id } = await params;
+   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/articles/${id}`);
    if (!res.ok) return { title: "Artigo não encontrado" };
    const article: Article = await res.json();
    return {
@@ -20,7 +19,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       openGraph: {
          title: article.title,
          description: article.description.slice(0, 150),
-         url: `/articles/${params.id}`,
+         url: `/articles/${id}`,
          images: [
             {
                url: article.img_lg,
@@ -45,8 +44,9 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 }
 
 export default async function ArticlesDetailController({ params }: Params) {
+   const { id } = await params;
    const res = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/articles/${params.id}`,
+      `${process.env.NEXT_PUBLIC_API_URL}/articles/${id}`,
       { next: { revalidate: 60 } }
    );
 

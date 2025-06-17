@@ -10,8 +10,10 @@ export function AdsSection(): JSX.Element {
       >
          <div className="flex flex-col xl:flex-row items-center gap-6">
             <div className="flex-1 text-center xl:text-left">
-               <h2 className="h2 mb-4">Inove seu dia a dia com tecnologia.</h2>
-               <p className="max-w-[25.625rem] mx-auto xl:mx-0">
+               <h2 className="h2 mb-4 text-primary">
+                  Inove seu dia a dia com tecnologia.
+               </h2>
+               <p className="max-w-[25.625rem] mx-auto xl:mx-0 text-primary">
                   Smartphones, fones, acessórios e muito mais com ofertas
                   especiais. Baixe o app e aproveite os descontos 💥📱🎧
                </p>

@@ -25,10 +25,10 @@ export function SkeletonGrid({
                role="listitem"
                className="flex flex-col space-y-3"
             >
-               <Skeleton className="h-56 rounded-xl" />
+               <Skeleton className="h-56 rounded-xl bg-secondary/50" />
                <div className="space-y-2">
-                  <Skeleton className="h-4 w-full" />
-                  <Skeleton className="h-4 w-48" />
+                  <Skeleton className="h-4 w-full bg-secondary/50" />
+                  <Skeleton className="h-4 w-48 bg-secondary/50" />
                </div>
             </div>
          ))}

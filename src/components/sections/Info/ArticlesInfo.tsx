@@ -23,14 +23,14 @@ export function ArticlesInfo({ article }: ArticlesInfoProps) {
                   aria-hidden="true"
                   className="text-2xl text-accent"
                />
-               <time dateTime={dateTimeAttr}>
+               <time dateTime={dateTimeAttr} className="text-lightText">
                   Publicado: {formattedDate} ● {article.hour}
                </time>
             </div>
          </div>
          <div className="flex items-center gap-2">
             <BiLayer className="text-2xl text-accent" />
-            <p className="capitalize">Tema: {article.type}</p>
+            <p className="capitalize text-lightText">Tema: {article.type}</p>
          </div>
       </div>
    );

@@ -33,7 +33,7 @@ export function ArticlesList(): JSX.Element {
    if (filteredArticles.length === 0) {
       return (
          <section aria-live="polite" className="h-[80vh]">
-            <p className="text-white/80 text-center mt-6">
+            <p className="text-accent text-center mt-6">
                Nenhum artigo encontrado.
             </p>
          </section>
@@ -42,7 +42,7 @@ export function ArticlesList(): JSX.Element {
 
    return (
       <section aria-label="Lista de artigos">
-         <h4 className="text-lg mb-6">
+         <h4 className="text-lg mb-6 text-accent">
             {filteredArticles.length} resultados encontrados.
          </h4>
          <ul className="grid grid-cols-1 xl:grid-cols-4 gap-[1.875rem] mb-32">
