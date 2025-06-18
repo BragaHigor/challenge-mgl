@@ -1,20 +1,22 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import type { Article } from "@/types";
 import ArticlesDetailView from "../view";
-
-interface Params {
-   params: { id: string };
+import { ParsedUrlQuery } from "querystring";
+interface Props {
+   params: Promise<{ id: string }>;
+   searchParams?: ParsedUrlQuery;
 }
 
-export async function generateMetadata({ params }: Params): Promise<Metadata> {
-   const { id } = await params;
+export async function generateMetadata(props: Props): Promise<Metadata> {
+   const { id } = await props.params;
+
    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/articles/${id}`);
    if (!res.ok) return { title: "Artigo não encontrado" };
    const article: Article = await res.json();
    return {
-      title: `Artigo | ${article.title}`,
+      title: `Artigo ${article.id} | ${article.title}`,
       description: article.description.slice(0, 150),
       openGraph: {
          title: article.title,
@@ -43,8 +45,10 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
    };
 }
 
-export default async function ArticlesDetailController({ params }: Params) {
-   const { id } = await params;
+export default async function ArticlesDetailController(
+   props: Props
+): Promise<ReactElement> {
+   const { id } = await props.params;
    const res = await fetch(
       `${process.env.NEXT_PUBLIC_API_URL}/articles/${id}`,
       { next: { revalidate: 60 } }

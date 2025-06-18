@@ -1,3 +1,5 @@
+"use client";
+
 import { JSX, useCallback, useContext } from "react";
 import { Searchbar } from "../Searchbar/Searchbar";
 import { ArticlesContext } from "@/context/ArticlesContext";

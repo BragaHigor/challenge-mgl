@@ -1,18 +1,22 @@
-import { ArticlesContext } from "@/context/ArticlesContext";
 import { Article } from "@/types";
 import Image from "next/image";
-import { JSX, useContext } from "react";
+import { JSX, useMemo } from "react";
 import { BiCalendar, BiTime, BiUser } from "react-icons/bi";
+import { ptBR } from "date-fns/locale";
+import { format, parseISO } from "date-fns";
 
 interface ArticleCardProps {
    article: Article;
 }
 
 export function ArticlesCard({ article }: ArticleCardProps): JSX.Element {
-   const { formatDate } = useContext(ArticlesContext);
-
    const dbDate = article.date;
-   const formattedDate = formatDate(dbDate);
+   const displayDate = useMemo(() => {
+      const dateObj = parseISO(dbDate);
+      return dbDate
+         ? format(dateObj, "dd 'de' MMM, yyyy", { locale: ptBR })
+         : "Data";
+   }, [dbDate]);
 
    return (
       <article className="bg-secondary/20  hover:bg-secondary/50 transition-colors rounded-3xl overflow-hidden flex flex-col justify-start h-[27.5rem] w-[20rem] sm:w-full mx-auto sm:mx-0 p-4">
@@ -35,10 +39,10 @@ export function ArticlesCard({ article }: ArticleCardProps): JSX.Element {
                   <div className="flex items-center gap-1">
                      <BiCalendar aria-hidden="true" />
                      <time
-                        dateTime={formattedDate}
+                        dateTime={displayDate}
                         className="text-[0.9375rem] text-lightText/70"
                      >
-                        {formattedDate}
+                        {displayDate}
                      </time>
                   </div>
                   <div className="flex items-center gap-1">

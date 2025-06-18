@@ -11,15 +11,14 @@ import {
 } from "@/components/ui/select";
 import { ArticlesContext } from "@/context/ArticlesContext";
 import { BiUser } from "react-icons/bi";
+import { getTriggerClassName } from "../../../../utils/functions/getTriggerClassName";
 
 export function ArticlesAuthorSearch(): JSX.Element {
    const { articles, selectedAuthor, setSelectedAuthor } =
       useContext(ArticlesContext);
 
    const uniqueAuthors = useMemo(() => {
-      const names = articles.flatMap((article) =>
-         article.author.map((a) => a.name)
-      );
+      const names = articles.flatMap((a) => a.author.map((x) => x.name));
       return ["Todos os autores", ...Array.from(new Set(names))];
    }, [articles]);
 
@@ -29,6 +28,8 @@ export function ArticlesAuthorSearch(): JSX.Element {
       },
       [setSelectedAuthor]
    );
+
+   const triggerClassName = getTriggerClassName(!!selectedAuthor);
 
    return (
       <div className="flex items-center gap-2.5 w-full xl:w-[11.875rem] select-none">
@@ -40,16 +41,13 @@ export function ArticlesAuthorSearch(): JSX.Element {
             onValueChange={handleChange}
             aria-label="Filtrar por autor"
          >
-            <SelectTrigger className="bg-transparent border-none focus:ring-0 focus:ring-offset-0 text-left p-0 text-primary">
+            <SelectTrigger className={triggerClassName}>
                <SelectValue placeholder="Autores" />
             </SelectTrigger>
             <SelectContent>
                <SelectGroup>
                   {uniqueAuthors.map((author) => (
-                     <SelectItem
-                        key={author}
-                        value={author === "Todos os autores" ? null : author}
-                     >
+                     <SelectItem key={author} value={author}>
                         {author}
                      </SelectItem>
                   ))}

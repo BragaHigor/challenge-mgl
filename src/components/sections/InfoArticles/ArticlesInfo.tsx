@@ -1,7 +1,8 @@
 "use client";
 
-import { useContext } from "react";
-import { ArticlesContext } from "@/context/ArticlesContext";
+import { useMemo } from "react";
+import { ptBR } from "date-fns/locale";
+import { format, parseISO } from "date-fns";
 import { BiCalendar, BiLayer } from "react-icons/bi";
 import { Article } from "@/types";
 
@@ -10,10 +11,15 @@ interface ArticlesInfoProps {
 }
 
 export function ArticlesInfo({ article }: ArticlesInfoProps) {
-   const { formatDate } = useContext(ArticlesContext);
+   const dbDate = article.date;
+   const displayDate = useMemo(() => {
+      const dateObj = parseISO(dbDate);
+      return dbDate
+         ? format(dateObj, "dd 'de' MMM, yyyy", { locale: ptBR })
+         : "Data";
+   }, [dbDate]);
 
-   const formattedDate = formatDate(article.date);
-   const dateTimeAttr = `${article.date}T${article.hour}`;
+   const dateTimeAttr = `${displayDate}T${article.hour}`;
 
    return (
       <div className="flex flex-col xl:flex-row gap-4 items-start justify-between">
@@ -24,7 +30,7 @@ export function ArticlesInfo({ article }: ArticlesInfoProps) {
                   className="text-2xl text-accent"
                />
                <time dateTime={dateTimeAttr} className="text-lightText">
-                  Publicado: {formattedDate} ● {article.hour}
+                  Publicado: {displayDate} ● {article.hour}
                </time>
             </div>
          </div>
