@@ -29,7 +29,6 @@ export interface ArticlesContextValue {
    setSelectedDate: Dispatch<SetStateAction<Date | null>>;
    selectedType: string;
    setSelectedType: Dispatch<SetStateAction<string>>;
-   formatDate: (dateString: string) => string;
 }
 
 export interface ArticlesProviderProps {

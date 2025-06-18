@@ -1,8 +1,9 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { ArticlesCard } from "@/components/sections/Articles/ArticlesCard";
-import { ArticlesContext } from "@/context/ArticlesContext";
 import mockDb from "../../../../utils/mock/db.json";
+import { format, parseISO } from "date-fns";
+import { ptBR } from "date-fns/locale";
 
 jest.mock("next/image", () => ({
    __esModule: true,
@@ -19,22 +20,9 @@ jest.mock("react-icons/bi", () => ({
 
 describe("ArticlesCard component", () => {
    const article = mockDb.articles[0];
-   const formatted = `formatted-${article.date}`;
-   const mockFormatDate = jest.fn(() => formatted);
 
    beforeEach(() => {
-      render(
-         <ArticlesContext.Provider
-            value={{ formatDate: mockFormatDate } as any}
-         >
-            <ArticlesCard article={article} />
-         </ArticlesContext.Provider>
-      );
-   });
-
-   it("calls formatDate with the article date", () => {
-      expect(mockFormatDate).toHaveBeenCalledTimes(1);
-      expect(mockFormatDate).toHaveBeenCalledWith(article.date);
+      render(<ArticlesCard article={article} />);
    });
 
    it("renders the image with correct src and alt", () => {
@@ -47,12 +35,6 @@ describe("ArticlesCard component", () => {
       const badge = screen.getByText(article.type);
       expect(badge).toBeInTheDocument();
       expect(badge).toHaveClass("uppercase");
-   });
-
-   it("shows formatted date in a time element with dateTime", () => {
-      const time = screen.getByText(formatted);
-      expect(time.tagName).toBe("TIME");
-      expect(time).toHaveAttribute("dateTime", formatted);
    });
 
    it("displays the article hour", () => {
@@ -77,5 +59,23 @@ describe("ArticlesCard component", () => {
       expect(screen.getByTestId("icon-calendar")).toBeInTheDocument();
       expect(screen.getByTestId("icon-time")).toBeInTheDocument();
       expect(screen.getByTestId("icon-user")).toBeInTheDocument();
+   });
+
+   it("formats and displays the date correctly", () => {
+      const dateString = article.date;
+      const expected = format(parseISO(dateString), "dd 'de' MMM, yyyy", {
+         locale: ptBR,
+      });
+      const timeEl = screen.getByText(expected);
+      expect(timeEl).toBeInTheDocument();
+      expect(timeEl).toHaveAttribute("dateTime", expected);
+   });
+
+   it("displays placeholder when date is empty", () => {
+      const customArticle = { ...article, date: "" };
+      render(<ArticlesCard article={customArticle} />);
+      const timeEl = screen.getByText("Data");
+      expect(timeEl).toBeInTheDocument();
+      expect(timeEl).toHaveAttribute("dateTime", "Data");
    });
 });

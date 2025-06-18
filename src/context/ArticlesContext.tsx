@@ -13,6 +13,7 @@ import {
    ArticlesProviderProps,
    Filters,
 } from "../types";
+import { parseISO } from "date-fns";
 
 export const ArticlesContext = createContext<ArticlesContextValue>(
    {} as ArticlesContextValue
@@ -92,8 +93,8 @@ export function ArticlesProvider({ children }: ArticlesProviderProps) {
             article.author.some((a) => a.name.toLowerCase() === authorFilter);
 
          const matchesDate = appliedFilters.selectedDate
-            ? new Date(article.date).toDateString() ===
-              new Date(appliedFilters.selectedDate).toDateString()
+            ? parseISO(article.date).toDateString() ===
+              appliedFilters.selectedDate.toDateString()
             : true;
 
          const matchesType =
@@ -137,16 +138,6 @@ export function ArticlesProvider({ children }: ArticlesProviderProps) {
       setSelectedType("");
    }, []);
 
-   const formatDate = useCallback((dateString: string): string => {
-      const d = new Date(dateString);
-      const day = String(d.getDate()).padStart(2, "0");
-      const month = new Intl.DateTimeFormat("pt-BR", { month: "short" })
-         .format(d)
-         .replace(/\.$/, "");
-      const year = d.getFullYear();
-      return `${day} de ${month}, ${year}`;
-   }, []);
-
    const contextValue = useMemo<ArticlesContextValue>(
       () => ({
          articles,
@@ -164,7 +155,6 @@ export function ArticlesProvider({ children }: ArticlesProviderProps) {
          setSelectedDate,
          selectedType,
          setSelectedType,
-         formatDate,
       }),
       [
          articles,
@@ -181,7 +171,6 @@ export function ArticlesProvider({ children }: ArticlesProviderProps) {
          setSelectedDate,
          selectedType,
          setSelectedType,
-         formatDate,
       ]
    );
 

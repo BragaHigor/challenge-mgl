@@ -3,8 +3,8 @@
 import React, { ReactElement } from "react";
 import Head from "next/head";
 import Image from "next/image";
-import { ArticlesInfo } from "@/components/sections/Info/ArticlesInfo";
-import { AuthorsInfo } from "@/components/sections/Info/AuthorsInfo";
+import { ArticlesInfo } from "@/components/sections/InfoArticles/ArticlesInfo";
+import { AuthorsInfo } from "@/components/sections/InfoArticles/AuthorsInfo";
 import type { Article } from "@/types";
 
 interface ArticlesDetailViewProps {
