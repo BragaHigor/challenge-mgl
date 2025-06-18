@@ -25,8 +25,8 @@ export interface ArticlesContextValue {
    showArticlesList: boolean;
    selectedAuthor: string;
    setSelectedAuthor: Dispatch<SetStateAction<string>>;
-   selectedDate: Date | null;
-   setSelectedDate: Dispatch<SetStateAction<Date | null>>;
+   selectedDate: Date | undefined;
+   setSelectedDate: Dispatch<SetStateAction<Date | undefined>>;
    selectedType: string;
    setSelectedType: Dispatch<SetStateAction<string>>;
 }
@@ -49,6 +49,6 @@ interface Author {
 export interface Filters {
    searchTerm: string;
    selectedAuthor: string;
-   selectedDate: Date | null;
+   selectedDate: Date | undefined;
    selectedType: string;
 }

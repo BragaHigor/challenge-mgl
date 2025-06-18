@@ -27,13 +27,15 @@ export function ArticlesProvider({ children }: ArticlesProviderProps) {
 
    const [searchTerm, setSearchTerm] = useState<string>("");
    const [selectedAuthor, setSelectedAuthor] = useState<string>("");
-   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
+   const [selectedDate, setSelectedDate] = useState<Date | undefined>(
+      undefined
+   );
    const [selectedType, setSelectedType] = useState<string>("");
 
    const [appliedFilters, setAppliedFilters] = useState<Filters>({
       searchTerm: "",
       selectedAuthor: "",
-      selectedDate: null as Date | null,
+      selectedDate: undefined,
       selectedType: "",
    });
 
@@ -129,12 +131,12 @@ export function ArticlesProvider({ children }: ArticlesProviderProps) {
       setAppliedFilters({
          searchTerm: "",
          selectedAuthor: "",
-         selectedDate: null,
+         selectedDate: undefined,
          selectedType: "",
       });
       setShowArticlesList(false);
       setSelectedAuthor("");
-      setSelectedDate(null);
+      setSelectedDate(undefined);
       setSelectedType("");
    }, []);
 
