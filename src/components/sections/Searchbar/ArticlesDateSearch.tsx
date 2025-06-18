@@ -13,7 +13,7 @@ export function ArticlesDateSearch(): JSX.Element {
    const { selectedDate, setSelectedDate } = useContext(ArticlesContext);
 
    const handleDateChange = useCallback(
-      (date: Date) => {
+      (date?: Date) => {
          setSelectedDate(date);
       },
       [setSelectedDate]
