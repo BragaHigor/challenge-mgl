@@ -168,7 +168,7 @@ SITE_URL="http://localhost:3000"
 -  Ver logs em tempo real:
 
 ```bash
-  docker compose logs -f backend
+  docker-compose logs -f frontend
 ```
 
 ---
