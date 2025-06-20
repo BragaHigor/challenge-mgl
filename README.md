@@ -4,7 +4,7 @@
 
 # Para conferir clique no link abaixo:
 
--  🌐 <a href="https://front-blog-nine.vercel.app/" target="_blank" rel="noopener noreferrer">https://front-blog-nine.vercel.app/</a>
+-  🌐 https://front-blog-nine.vercel.app/
 
 ---
 
